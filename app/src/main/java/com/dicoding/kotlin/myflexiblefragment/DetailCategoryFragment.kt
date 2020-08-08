@@ -1,5 +1,6 @@
 package com.dicoding.kotlin.myflexiblefragment
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.ParcelFileDescriptor
 import androidx.fragment.app.Fragment
@@ -61,7 +62,8 @@ class DetailCategoryFragment : Fragment(), View.OnClickListener {
     override fun onClick(v: View) {
         when(v.id) {
             R.id.btn_profile -> {
-
+                val mIntent = Intent(activity, ProfileActivity::class.java)
+                startActivity(mIntent)
             }
 
             R.id.btn_show_dialog -> {
